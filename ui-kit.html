@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raíz — UI Kit</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles-v2.css">
+<link rel="stylesheet" href="ui-kit.css">
+</head>
+<body class="kit-body">
+
+  <!-- ============ INTRO ============ -->
+  <header class="kit-header">
+    <span class="kit-header__eyebrow">Design system</span>
+    <h1 class="kit-header__title">Raíz — UI Kit</h1>
+    <p class="kit-header__desc">
+      Referencia visual de todos los elementos de marca: colores, tipografía,
+      botones, chips, cards, acordeón y formulario. Cada bloque usa las
+      mismas clases que el sitio, listas para copiar y pegar.
+    </p>
+  </header>
+
+  <!-- ============ NAV INTERNA ============ -->
+  <nav class="kit-nav">
+    <a href="#colores">Colores</a>
+    <a href="#tipografia">Tipografía</a>
+    <a href="#radios">Radios</a>
+    <a href="#botones">Botones</a>
+    <a href="#chips">Chips</a>
+    <a href="#cards">Cards</a>
+    <a href="#accordion">Acordeón</a>
+    <a href="#formulario">Formulario</a>
+    <a href="#footer-links">Footer</a>
+  </nav>
+
+  <!-- ============ COLORES ============ -->
+  <section class="kit-section" id="colores">
+    <h2 class="kit-section__title">Colores</h2>
+    <p class="kit-section__subtitle">Click en un color para copiar su hex.</p>
+
+    <div class="kit-grid">
+      <button class="kit-swatch" data-hex="#fdf26c" type="button">
+        <div class="kit-swatch__color" style="background:var(--amarillo);"></div>
+        <div class="kit-swatch__meta">
+          <span class="kit-swatch__name">Amarillo</span>
+          <span class="kit-swatch__hex">--amarillo · #fdf26c</span>
+        </div>
+      </button>
+
+      <button class="kit-swatch" data-hex="#ffc6ba" type="button">
+        <div class="kit-swatch__color" style="background:var(--rosa);"></div>
+        <div class="kit-swatch__meta">
+          <span class="kit-swatch__name">Rosa</span>
+          <span class="kit-swatch__hex">--rosa · #ffc6ba</span>
+        </div>
+      </button>
+
+      <button class="kit-swatch" data-hex="#ff6400" type="button">
+        <div class="kit-swatch__color" style="background:var(--naranja);"></div>
+        <div class="kit-swatch__meta">
+          <span class="kit-swatch__name">Naranja</span>
+          <span class="kit-swatch__hex">--naranja · #ff6400</span>
+        </div>
+      </button>
+
+      <button class="kit-swatch" data-hex="#000000" type="button">
+        <div class="kit-swatch__color" style="background:var(--negro);"></div>
+        <div class="kit-swatch__meta">
+          <span class="kit-swatch__name">Negro</span>
+          <span class="kit-swatch__hex">--negro · #000000</span>
+        </div>
+      </button>
+
+      <button class="kit-swatch" data-hex="#ffffff" type="button">
+        <div class="kit-swatch__color" style="background:var(--blanco); border-bottom:1px solid rgba(0,0,0,0.08);"></div>
+        <div class="kit-swatch__meta">
+          <span class="kit-swatch__name">Blanco</span>
+          <span class="kit-swatch__hex">--blanco · #ffffff</span>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ TIPOGRAFÍA ============ -->
+  <section class="kit-section" id="tipografia">
+    <h2 class="kit-section__title">Tipografía</h2>
+    <p class="kit-section__subtitle">Poppins en todos los pesos. Las reglas globales fuerzan h1/h2 a 900, h3 a 700 y p a 400.</p>
+
+    <div class="kit-block">
+      <div class="kit-type-row">
+        <h1 class="kit-type-row__sample" style="font-size: clamp(32px,4vw,48px); color: var(--naranja);">Creá desde la raíz</h1>
+        <span class="kit-type-row__meta">h1 · Poppins 900</span>
+      </div>
+      <div class="kit-type-row">
+        <h2 class="kit-type-row__sample" style="font-size: clamp(26px,3.5vw,38px); color: var(--naranja);">Volver a las raíces</h2>
+        <span class="kit-type-row__meta">h2 · Poppins 900</span>
+      </div>
+      <div class="kit-type-row">
+        <h3 class="kit-type-row__sample" style="font-size: 20px; color: var(--negro);">Técnica rigurosa</h3>
+        <span class="kit-type-row__meta">h3 · Poppins 700</span>
+      </div>
+      <div class="kit-type-row">
+        <p class="kit-type-row__sample" style="font-size: 15px; line-height: 1.6; color: var(--negro);">Somos una comunidad creativa que enseña restauración de muebles, reciclaje y diseño.</p>
+        <span class="kit-type-row__meta">p · Poppins 400</span>
+      </div>
+      <div class="kit-type-row">
+        <span class="kit-type-row__sample" style="display:block; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--naranja);">Eyebrow / label</span>
+        <span class="kit-type-row__meta">span · Poppins 600 · uppercase</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RADIOS ============ -->
+  <section class="kit-section" id="radios">
+    <h2 class="kit-section__title">Radios</h2>
+    <p class="kit-section__subtitle">Los dos border-radius base del sistema.</p>
+
+    <div class="kit-row">
+      <div class="kit-radius-demo" style="border-radius: var(--radius);">--radius<br>24px</div>
+      <div class="kit-radius-demo" style="border-radius: var(--radius-sm);">--radius-sm<br>14px</div>
+      <div class="kit-radius-demo" style="border-radius: 50px;">botones<br>50px</div>
+    </div>
+  </section>
+
+  <!-- ============ BOTONES ============ -->
+  <section class="kit-section" id="botones">
+    <h2 class="kit-section__title">Botones</h2>
+    <p class="kit-section__subtitle">Pasá el mouse para ver el hover.</p>
+
+    <div class="kit-block">
+      <span class="kit-block__label">Primary <code>.btn.btn--primary</code></span>
+      <div class="kit-row">
+        <a href="#" class="btn btn--primary">Inscribirme</a>
+      </div>
+    </div>
+
+    <div class="kit-block">
+      <span class="kit-block__label">Dark <code>.btn.btn--dark</code></span>
+      <div class="kit-row">
+        <button class="btn btn--dark" type="button">Enviar</button>
+      </div>
+    </div>
+
+    <div class="kit-block">
+      <span class="kit-block__label">Outline (sobre fondo oscuro) <code>.btn.btn--outline</code></span>
+      <div class="kit-dark-demo">
+        <a href="#" class="btn btn--outline">+ Más info</a>
+      </div>
+    </div>
+
+    <div class="kit-block">
+      <span class="kit-block__label">Tamaño chico <code>.btn--sm</code></span>
+      <div class="kit-row">
+        <a href="#" class="btn btn--primary btn--sm">Inscribirme</a>
+        <button class="btn btn--dark btn--sm" type="button">Enviar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHIPS ============ -->
+  <section class="kit-section" id="chips">
+    <h2 class="kit-section__title">Chips</h2>
+    <p class="kit-section__subtitle">Dos variantes: chip informativo (Nosotros) y chip sobre imagen (curso-card).</p>
+
+    <div class="kit-block">
+      <span class="kit-block__label">Chip con ícono <code>.nosotros__chip</code></span>
+      <div class="nosotros__chips" style="max-width: 480px;">
+        <div class="nosotros__chip">
+          <div style="width:24px;height:24px;background:var(--naranja);border-radius:6px;"></div>
+          <strong class="nosotros__chip-text">Aprendé a tu ritmo</strong>
+        </div>
+        <div class="nosotros__chip">
+          <div style="width:24px;height:24px;background:var(--naranja);border-radius:6px;"></div>
+          <strong class="nosotros__chip-text">Creá con propósito</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="kit-block">
+      <span class="kit-block__label">Chip sobre imagen <code>.curso-card__chip</code></span>
+      <div class="kit-dark-demo">
+        <div class="curso-card__chips">
+          <span class="curso-card__chip">6 semanas</span>
+          <span class="curso-card__chip">Online</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARDS ============ -->
+  <section class="kit-section" id="cards">
+    <h2 class="kit-section__title">Cards</h2>
+    <p class="kit-section__subtitle">Curso card, flip-card (click para dar vuelta) y testimonio card.</p>
+
+    <div class="kit-cards-row">
+
+      <!-- Curso card -->
+      <div>
+        <span class="kit-block__label">Curso card <code>.curso-card</code></span>
+        <article class="curso-card is-visible">
+          <div class="curso-card__img">
+            <div class="kit-placeholder" style="height:220px;">REEMPLAZAR<br>imagen curso</div>
+            <div class="curso-card__img-overlay">
+              <h3 class="curso-card__img-title">Restauración para principiantes</h3>
+              <div class="curso-card__chips">
+                <span class="curso-card__chip">6 semanas</span>
+                <span class="curso-card__chip">Online</span>
+              </div>
+            </div>
+          </div>
+          <div class="curso-card__body">
+            <p class="curso-card__desc">Aprendé las técnicas base para restaurar tu primer mueble desde cero.</p>
+            <a href="#" class="curso-card__link">Ver más</a>
+            <div class="curso-card__footer">
+              <span class="curso-card__price">$12.000 <span class="curso-card__currency">ARS</span></span>
+              <a href="#" class="btn btn--primary curso-card__cta">Inscribirme</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Flip card -->
+      <div>
+        <span class="kit-block__label">Flip card <code>.flip-card</code></span>
+        <div class="flip-card" tabindex="0" role="button" aria-pressed="false" style="max-width: 260px;">
+          <div class="flip-card__inner">
+            <div class="flip-card__face flip-card__face--front">
+              <div class="kit-placeholder kit-flip-face--front">REEMPLAZAR<br>imagen frente</div>
+              <div class="flip-card__front-text">
+                <h3 class="flip-card__title">Técnica rigurosa</h3>
+              </div>
+            </div>
+            <div class="flip-card__face flip-card__face--back">
+              <div class="kit-placeholder kit-flip-face--back" style="position:absolute; inset:0; z-index:0;"></div>
+              <p class="flip-card__back-text">Diagnóstico, reparación y restauración integral paso a paso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio card -->
+      <div>
+        <span class="kit-block__label">Testimonio card <code>.testimonio-card</code></span>
+        <div class="testimonio-card" style="background: var(--rosa); max-width: 300px; border-radius: var(--radius-sm);">
+          <p>"El curso me dio la confianza para animarme a restaurar mi primer mueble."</p>
+          <div class="testimonio-card__author">
+            <strong>Marina G.</strong><br>
+            <small>Curso principiantes</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ACORDEÓN ============ -->
+  <section class="kit-section" id="accordion">
+    <h2 class="kit-section__title">Acordeón</h2>
+    <p class="kit-section__subtitle">Mismo patrón usado en FAQ / Nosotros. Click para expandir.</p>
+
+    <div class="kit-accordion-demo" id="accordionKit">
+      <div class="accordion__item">
+        <button class="accordion__header" aria-expanded="false">
+          ¿Necesito experiencia previa?
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__panel">
+          <div class="accordion__panel-inner">
+            No, el curso para principiantes arranca desde cero.
+          </div>
+        </div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__header" aria-expanded="false">
+          ¿Las clases son en vivo?
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__panel">
+          <div class="accordion__panel-inner">
+            Son grabadas, con acceso ilimitado y encuentros en vivo opcionales.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORMULARIO ============ -->
+  <section class="kit-section" id="formulario">
+    <h2 class="kit-section__title">Formulario</h2>
+    <p class="kit-section__subtitle">Estados: normal, focus y error <code>.form-group--error</code>.</p>
+
+    <div class="kit-form-demo">
+      <div class="form-group">
+        <label for="kitNombre">Nombre</label>
+        <input type="text" id="kitNombre" name="nombre">
+        <span class="form-error"></span>
+      </div>
+
+      <div class="form-group" style="margin-top: 18px;">
+        <label for="kitEmail">Email</label>
+        <input type="email" id="kitEmail" name="email" value="no-valido">
+        <span class="form-error"></span>
+      </div>
+
+      <div class="form-group form-group--error" style="margin-top: 18px;">
+        <label for="kitMensaje">Mensaje</label>
+        <textarea id="kitMensaje" name="mensaje" rows="3"></textarea>
+        <span class="form-error">Este campo es obligatorio</span>
+      </div>
+
+      <button class="btn btn--dark" type="button" style="margin-top: 18px;">Enviar</button>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER LINKS ============ -->
+  <section class="kit-section" id="footer-links" style="border-bottom: none;">
+    <h2 class="kit-section__title">Footer links</h2>
+    <p class="kit-section__subtitle">Links de navegación y sociales sobre fondo negro.</p>
+
+    <div class="kit-dark-demo" style="display:flex; gap: 48px; flex-wrap: wrap;">
+      <div class="footer__nav">
+        <a href="#" class="footer__link">Nosotros</a>
+        <a href="#" class="footer__link">Cursos</a>
+        <a href="#" class="footer__link">Contactanos</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" class="footer__social-link">Instagram</a>
+        <a href="#" class="footer__social-link">Facebook</a>
+        <a href="#" class="footer__social-link">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="ui-kit.js"></script>
+</body>
+</html>

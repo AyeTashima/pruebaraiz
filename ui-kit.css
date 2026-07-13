@@ -1,0 +1,284 @@
+/* ==========================================================================
+   RAÍZ — UI KIT
+   Estilos EXCLUSIVOS de esta página de referencia (layout, swatches,
+   etiquetas). Los componentes reales (botones, cards, chips, forms,
+   accordion) usan las clases de styles-v2.css tal cual están en el sitio.
+   ========================================================================== */
+
+.kit-body {
+  padding-top: 40px;
+}
+
+.kit-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.kit-header__eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--naranja);
+  margin-bottom: 10px;
+}
+
+.kit-header__title {
+  font-size: clamp(32px, 5vw, 52px);
+  color: var(--negro);
+  margin-bottom: 12px;
+}
+
+.kit-header__desc {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.65);
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.kit-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  position: sticky;
+  top: 0;
+  background: var(--blanco);
+  z-index: 50;
+  padding-bottom: 16px;
+}
+
+.kit-nav a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--negro);
+  opacity: 0.6;
+}
+
+.kit-nav a:hover {
+  opacity: 1;
+  color: var(--naranja);
+}
+
+.kit-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 70px 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 80px;
+}
+
+.kit-section__title {
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--negro);
+  margin-bottom: 8px;
+}
+
+.kit-section__subtitle {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 36px;
+  max-width: 640px;
+  line-height: 1.6;
+}
+
+.kit-block {
+  margin-bottom: 44px;
+}
+
+.kit-block:last-child {
+  margin-bottom: 0;
+}
+
+.kit-block__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
+}
+
+.kit-block__label code {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--naranja);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 6px;
+}
+
+.kit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.kit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* --- Colores --- */
+.kit-swatch {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  text-align: left;
+  font-family: var(--font-principal);
+  transition: transform 0.2s ease;
+}
+
+.kit-swatch:hover {
+  transform: translateY(-4px);
+}
+
+.kit-swatch__color {
+  height: 90px;
+  width: 100%;
+}
+
+.kit-swatch__meta {
+  padding: 12px 14px;
+}
+
+.kit-swatch__name {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--negro);
+}
+
+.kit-swatch__hex {
+  display: block;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
+}
+
+.kit-swatch__copied {
+  color: var(--naranja) !important;
+  font-weight: 700;
+}
+
+/* --- Tipografía --- */
+.kit-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.kit-type-row:last-child {
+  border-bottom: none;
+}
+
+.kit-type-row__sample {
+  flex: 1;
+  min-width: 0;
+}
+
+.kit-type-row__meta {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+}
+
+/* --- Radios / spacing --- */
+.kit-radius-demo {
+  width: 90px;
+  height: 90px;
+  background: var(--rosa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--negro);
+  text-align: center;
+}
+
+/* --- Placeholders (reemplazables por imágenes reales) --- */
+.kit-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.04),
+    rgba(0, 0, 0, 0.04) 10px,
+    rgba(0, 0, 0, 0.08) 10px,
+    rgba(0, 0, 0, 0.08) 20px
+  );
+}
+
+/* --- Contenedores de demo con fondo oscuro (chips sobre foto, footer) --- */
+.kit-dark-demo {
+  background: var(--negro);
+  border-radius: var(--radius-sm);
+  padding: 28px;
+}
+
+/* --- Cards side by side --- */
+.kit-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+/* --- Flip card placeholder faces --- */
+.kit-flip-face--front {
+  background: var(--rosa);
+}
+
+.kit-flip-face--back {
+  background: var(--amarillo);
+}
+
+/* --- Accordion demo width --- */
+.kit-accordion-demo {
+  max-width: 560px;
+}
+
+/* --- Form demo width --- */
+.kit-form-demo {
+  max-width: 420px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+@media (max-width: 640px) {
+  .kit-header,
+  .kit-nav,
+  .kit-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .kit-nav {
+    position: static;
+  }
+}

@@ -17,12 +17,14 @@
   overflow: hidden;
 }
 
+
+
 /* Degradado oscuro detrás de la tipografía, hasta la mitad de la pantalla */
 .curso-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 75%);
   z-index: 1;
 }
 
@@ -53,7 +55,7 @@
 .curso-hero__titulo {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: var(--naranja);
+  color: var(--blanco);
   line-height: 1.1;
   margin: 0 0 12px;
 }
@@ -65,7 +67,7 @@
 }
 
 .curso-hero__docente strong {
-  color: var(--naranja);
+  color: var(--blanco);
 }
 
 .curso-hero__cta {
@@ -182,13 +184,19 @@
 }
 
 .curso-desc__cta {
-  background: var(--amarillo);
-  color: var(--negro);
+  background: var(--blanco);
+  color: var(--naranja);
   font-weight: 700;
   font-size: 15px;
   padding: 12px 28px;
   border-radius: 50px;
   white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.curso-desc__cta:hover {
+  background: var(--amarillo);
+  color: var(--naranja);
 }
 
 .curso-desc__inner {
@@ -460,6 +468,7 @@
   font-size: 0.9rem;
   line-height: 1.4;
   color: var(--blanco);
+  word-spacing: -2px;
 }
 
 .contenido-panel__list .video-icon {
@@ -793,6 +802,7 @@
 .curso-cta-final__inner {
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 30px;
   padding: 0 24px;
 }
 
@@ -805,7 +815,7 @@
 
 .curso-cta-final p {
   font-size: 1rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0 0 32px;
 }
 
@@ -825,12 +835,14 @@
 
 .curso-cta-final .btn--primary {
   background-color: var(--blanco);
+  border-color: var(--blanco);
   color: var(--naranja);
 }
 
 .curso-cta-final .btn--primary:hover {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
+  color: var(--naranja);
 }
 
 /* ==========================================================================
@@ -922,3 +934,23 @@
   }
 }
 
+@media (max-width: 768px) {
+  .curso-hero {
+    align-items: flex-end;
+  }
+
+  .curso-hero__inner {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .curso-hero__titulo {
+    color: var(--amarillo);
+  }
+
+  .curso-hero__docente {
+    color: var(--blanco);
+  }
+}
